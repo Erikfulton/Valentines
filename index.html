@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Valentine Quest 💘</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- START SCREEN -->
+  <div id="startScreen" class="start-screen">
+    <div class="start-card">
+      <div class="start-title">VALENTINE QUEST</div>
+      <div class="start-sub">Press START to begin</div>
+      <button id="startBtn" class="start-btn">START</button>
+      <div class="start-hint">Press <span class="key">Enter</span> too</div>
+    </div>
+  </div>
+
+  <!-- Floating hearts -->
+  <div class="hearts" aria-hidden="true">
+    <span class="heart">💗</span><span class="heart">💖</span><span class="heart">💘</span><span class="heart">💜</span>
+    <span class="heart">💗</span><span class="heart">💖</span><span class="heart">💘</span><span class="heart">💜</span>
+    <span class="heart">💗</span><span class="heart">💖</span><span class="heart">💘</span><span class="heart">💜</span>
+  </div>
+
+  <div id="particles" class="particles"></div>
+
+  <main class="card">
+    <h1>VIVIANA, WILL YOU BE MY VALENTINE?</h1>
+    <h2>VIVIANA, ¿QUIERES SER MI SAN VALENTÍN?</h2>
+
+    <div class="buttons">
+      <button class="yesBtn" data-choice="Yes">Yes</button>
+      <button class="yesBtn" data-choice="Yes (Spanish)">yes but in Spanish</button>
+    </div>
+
+    <p id="response" class="hidden"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
