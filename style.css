@@ -115,6 +115,17 @@ h2 {
   box-shadow: 0 6px 0 var(--ink);
 }
 
+.return-btn {
+  margin-top: 18px;
+  font-family: inherit;
+  border: 3px solid var(--ink);
+  background: #fff;
+  color: var(--ink);
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
 #response {
   margin-top: 18px;
   font-size: 12px;

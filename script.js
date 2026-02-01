@@ -2,6 +2,7 @@ const startScreen = document.getElementById("startScreen");
 const startBtn = document.getElementById("startBtn");
 const yesButtons = document.querySelectorAll(".yesBtn");
 const response = document.getElementById("response");
+const returnBtn = document.getElementById("returnBtn");
 const particles = document.getElementById("particles");
 
 let audioCtx;
@@ -28,9 +29,18 @@ function startGame() {
   startScreen.style.display = "none";
 }
 
+function resetGame() {
+  response.classList.add("hidden");
+  returnBtn.classList.add("hidden");
+  yesButtons.forEach(b => {
+    b.style.display = "inline-block";
+  });
+  startScreen.style.display = "grid";
+}
+
 startBtn.addEventListener("click", startGame);
 document.addEventListener("keydown", e => {
-  if (e.key === "Enter") startGame();
+  if (e.key === "Enter" && startScreen.style.display !== "none") startGame();
 });
 
 function burst(x, y) {
@@ -54,6 +64,9 @@ yesButtons.forEach(btn => {
     response.textContent = "💘 QUEST COMPLETE: VALENTINE ACCEPTED 💘";
     response.classList.remove("hidden");
     yesButtons.forEach(b => b.style.display = "none");
+    returnBtn.classList.remove("hidden");
     burst(e.clientX, e.clientY);
   });
 });
+
+returnBtn.addEventListener("click", resetGame);
